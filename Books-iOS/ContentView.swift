@@ -51,6 +51,7 @@ struct ContentView: View {
                 self.searchIsPresented.toggle()
             }, label: {Text("Search")}))
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $searchIsPresented, content: {
             VStack {
                 Text("Search View")
